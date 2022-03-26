@@ -1,0 +1,10 @@
+{
+    "app": {
+        "port": "MYCARTS_APP_PORT"
+    },
+    "db": {
+        "host": "MYCARTS_DB_HOST",
+        "port": "MYCARTS_DB_PORT",
+        "name": "MYCARTS_DB_NAME"
+    }
+}

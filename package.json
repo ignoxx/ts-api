@@ -1,0 +1,51 @@
+{
+  "name": "ts-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
+    "build": "tsc",
+    "postinstall": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.8"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/config": "^0.0.41",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.6.3"
+  },
+  "_moduleAliases": {
+    "@/resources/*": [
+      "resources/*"
+    ],
+    "@/utils/*": [
+      "utils/*"
+    ],
+    "@/middleware/*": [
+      "middleware/*"
+    ]
+  }
+}
