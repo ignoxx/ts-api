@@ -23,7 +23,9 @@
     "express": "^4.17.3",
     "helmet": "^5.0.2",
     "joi": "^17.6.0",
-    "mongoose": "^6.2.8"
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
@@ -38,14 +40,8 @@
     "typescript": "^4.6.3"
   },
   "_moduleAliases": {
-    "@/resources/*": [
-      "resources/*"
-    ],
-    "@/utils/*": [
-      "utils/*"
-    ],
-    "@/middleware/*": [
-      "middleware/*"
-    ]
+    "@/resources": "dist/resources",
+    "@/utils": "dist/utils",
+    "@/middleware": "dist/middleware"
   }
 }

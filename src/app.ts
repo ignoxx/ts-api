@@ -41,12 +41,14 @@ class App {
         this.express.use(ErrorMiddleware)
     }
 
-    private initDatabaseConnection(): void {
+    private async initDatabaseConnection(): Promise<void> {
         const MONGO_HOST: string = config.get("db.host")
         const MONGO_PORT: number = config.get("db.port")
         const MONGO_NAME: string = config.get("db.name")
 
-        mongoose.connect(`mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_NAME}`)
+        const result = await mongoose.connect(`mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_NAME}`)
+        if (result) console.log("Connected to db");
+        
     }
 
     public listen(): void {

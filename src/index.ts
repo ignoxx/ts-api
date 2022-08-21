@@ -2,4 +2,8 @@ import config from "config"
 import "module-alias/register"
 import App from "./app"
 
-const app = new App([], config.get("app.port"))
+import CartController from "@/resources/cart/cart.controller"
+
+const app = new App([new CartController()], config.get("app.port"))
+
+app.listen()
